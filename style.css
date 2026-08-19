@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #001b36;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+}
+
+.gerador {
+    background: #00264d;
+    border: 1px solid #0085ff;
+    padding: 40px;
+    border-radius: 8px;
+
+    box-shadow: 0 0 30px rgba(0, 132, 255, 0.15);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #b9cce0;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+/* SENHA */
+
+.senha-gerada {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+#campo-senha {
+    flex: 1;
+
+    background: #001b36;
+    color: #ffffff;
+
+    border: 2px solid #0085ff;
+    border-radius: 5px;
+
+    padding: 15px;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 18px;
+
+    outline: none;
+}
+
+.botao-copiar {
+    background: #0085ff;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 0 20px;
+
+    font-family: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-copiar:hover {
+    background: #006acb;
+}
+
+
+/* PARÂMETROS */
+
+.parametros {
+    background: #001b36;
+    border: 1px solid #0085ff;
+
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.parametros h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.2fr;
+    gap: 30px;
+}
+
+.parametro-senha__titulo {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+
+/* CONTROLE DE CARACTERES */
+
+.controle-caracteres {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.parametro-senha__botao {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #0085ff;
+    background: #00264d;
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.parametro-senha__botao:hover {
+    background: #0085ff;
+}
+
+.parametro-senha__texto {
+    min-width: 55px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* CHECKBOXES */
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkboxes label {
+    font-size: 12px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkboxes input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #0085ff;
+}
+
+
+/* FORÇA */
+
+.barra-forca {
+    width: 100%;
+    height: 14px;
+
+    background: #063052;
+
+    margin-bottom: 10px;
+}
+
+#barra-forca {
+    width: 50%;
+    height: 100%;
+
+    background: #ffcf00;
+
+    transition: 0.3s;
+}
+
+.legendas-forca {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 11px;
+    color: #c7d4e0;
+}
+
+
+/* BOTÃO GERAR */
+
+.botao-gerar {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    background: #0085ff;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-gerar:hover {
+    background: #006acb;
+    transform: translateY(-1px);
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+    text-align: center;
+    margin-top: 15px;
+
+    color: #8fd0ff;
+
+    font-size: 13px;
+
+    min-height: 18px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .gerador {
+        padding: 25px 20px;
+    }
+
+    .opcoes {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .senha-gerada {
+        flex-direction: column;
+    }
+
+    .botao-copiar {
+        padding: 13px;
+    }
+
+    #campo-senha {
+        width: 100%;
+    }
+}
