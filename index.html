@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="gerador">
+
+            <h1>🔒 Gerador de senhas</h1>
+
+            <p class="subtitulo">
+                Gere instantaneamente uma senha aleatória e segura
+            </p>
+
+            <div class="senha-gerada">
+                <input
+                    type="text"
+                    id="campo-senha"
+                    value="Sua senha aparecerá aqui"
+                    readonly
+                >
+
+                <button id="botao-copiar" class="botao-copiar">
+                    Copiar
+                </button>
+            </div>
+
+            <div class="parametros">
+
+                <h2>Personalize sua senha</h2>
+
+                <div class="opcoes">
+
+                    <!-- Quantidade de caracteres -->
+                    <div class="parametro-senha">
+
+                        <h4 class="parametro-senha__titulo">
+                            Número de caracteres
+                        </h4>
+
+                        <div class="controle-caracteres">
+
+                            <button
+                                id="botao-diminuir"
+                                class="parametro-senha__botao"
+                                type="button"
+                            >
+                                -
+                            </button>
+
+                            <p
+                                id="numero-caracteres"
+                                class="parametro-senha__texto"
+                            >
+                                12
+                            </p>
+
+                            <button
+                                id="botao-aumentar"
+                                class="parametro-senha__botao"
+                                type="button"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Características -->
+                    <div class="parametro-senha">
+
+                        <h4 class="parametro-senha__titulo">
+                            Características da senha
+                        </h4>
+
+                        <div class="checkboxes">
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="maiusculas"
+                                    checked
+                                >
+                                Letras maiúsculas
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="minusculas"
+                                    checked
+                                >
+                                Letras minúsculas
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="numeros"
+                                >
+                                Números
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="simbolos"
+                                >
+                                Símbolos
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Força -->
+                    <div class="parametro-senha">
+
+                        <h4 class="parametro-senha__titulo">
+                            Força da senha
+                        </h4>
+
+                        <div class="barra-forca">
+                            <div id="barra-forca"></div>
+                        </div>
+
+                        <div class="legendas-forca">
+                            <span>Fraca</span>
+                            <span>Média</span>
+                            <span>Forte</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button id="botao-gerar" class="botao-gerar">
+                Gerar senha
+            </button>
+
+            <p id="mensagem" class="mensagem"></p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
